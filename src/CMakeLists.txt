@@ -1,10 +1,10 @@
 file(GLOB files *.cpp *.h)
 
-add_library(BaseTypesLib STATIC ${files})
-target_include_directories(BaseTypesLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+add_library(basetypeslib STATIC ${files})
+target_include_directories(basetypeslib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 install(
-  TARGETS BaseTypesLib
+  TARGETS basetypeslib
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
