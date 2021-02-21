@@ -4,7 +4,7 @@
 #include <optional>
 #include <vector>
 
-namespace or2l::base_types {
+namespace base_types {
 
 // bless Hugues from Stack Overflow >>>
 // https://stackoverflow.com/questions/37089848/variable-array-dimension-at-runtime-c
@@ -38,7 +38,7 @@ class MultiArray {
   static std::size_t CalculateLinearDimension(
       const std::vector<std::size_t>& dims) {
     size_t result = 1;
-    for (size_t i = 0; i < dims.size(); ++i) result *= size_t(dims[i]);
+    for (unsigned long long dim : dims) result *= size_t(dim);
     return result;
   }
   [[nodiscard]] std::size_t index(
@@ -53,4 +53,4 @@ class MultiArray {
     return v;
   }
 };
-}  // namespace or2l::base_types
+}  // namespace base_types

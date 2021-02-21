@@ -3,7 +3,7 @@
 #include <functional>
 #include <vector>
 
-namespace or2l::base_types {
+namespace base_types {
 template <class T>
 class IGraph {
  public:
@@ -30,4 +30,4 @@ class Graph : public IGraph<T> {
   }
 };
 
-}  // namespace or2l::base_types
+}  // namespace base_types

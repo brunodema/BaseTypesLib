@@ -5,7 +5,7 @@
 #include <utility>
 #include <vector>
 
-namespace or2l::base_types {
+namespace base_types {
 class ArrayIterator {
  public:
   explicit ArrayIterator(std::vector<Bounds> bounds)
@@ -97,4 +97,4 @@ class ArrayIterator {
     return current_;
   }
 };
-}  // namespace or2l::base_types
+}  // namespace base_types

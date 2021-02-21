@@ -18,11 +18,11 @@
   } catch (...) {                   \
   }
 
-namespace or2l::base_types {
+namespace base_types {
 class ModuleTester : std::vector<std::function<void()>> {
  public:
   static std::vector<std::function<void()>> tests_;
 
   static int Run();
 };
-}  // namespace or2l::base_types
+}  // namespace base_types

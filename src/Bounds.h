@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <stdexcept>
 
-namespace or2l::base_types {
+namespace base_types {
 struct Bounds {
   Bounds(std::size_t lower_bound, std::size_t upper_bound)
       : lb(lower_bound), ub(upper_bound) {
@@ -15,4 +15,4 @@ struct Bounds {
   std::size_t lb;
   std::size_t ub;
 };
-}  // namespace or2l::base_types
+}  // namespace base_types

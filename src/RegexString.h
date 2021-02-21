@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include <string>
 
-namespace or2l {
+namespace base_types {
 class RegexString
     : public std::string  // considering that I only want to implement a minor
                           // check on the constructor of the base class, this
@@ -23,11 +23,11 @@ class RegexString
     return std::regex_search(*this, filter_);
   }
 };
-}  // namespace or2l
+}  // namespace base_types
 
 template <>
-struct std::hash<or2l::RegexString> {
-  std::size_t operator()(const or2l::RegexString& k) const {
+struct std::hash<base_types::RegexString> {
+  std::size_t operator()(const base_types::RegexString& k) const {
     // changed it to be based on their names, which makes sense when thinking
     // about the LaTeX implementation
     return std::hash<std::string>()(k);

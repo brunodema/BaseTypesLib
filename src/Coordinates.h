@@ -2,7 +2,7 @@
 #include <iostream>
 #include <utility>
 
-namespace or2l::base_types {
+namespace base_types {
 template <class T = double>
 class Coordinates {
  public:
@@ -24,8 +24,8 @@ class Coordinates {
   inline T& Id() { return this->id; }
 
  private:
-  std::string id_ = "";
+  std::string id_;
   T x_ = {};
   T y_ = {};
 };
-}  // namespace or2l::base_types
+}  // namespace base_types

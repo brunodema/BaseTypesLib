@@ -1,9 +1,9 @@
-set(EXECUTABLES_TO_BE_INSTALLED test-BaseTypesLib)
+set(EXECUTABLES_TO_BE_INSTALLED test_basetypeslib)
 
 # test-BaseTypesLib
-add_executable(test-BaseTypesLib test-BaseTypesLib.cpp)
-target_link_libraries(test-BaseTypesLib BaseTypesLib)
-add_test(NAME BASETYPESLIB COMMAND test-BaseTypesLib)
+add_executable(test_basetypeslib test_basetypeslib.cpp)
+target_link_libraries(test_basetypeslib basetypeslib)
+add_test(NAME test COMMAND test_basetypeslib)
 
 install(
   TARGETS ${EXECUTABLES_TO_BE_INSTALLED}

@@ -1,6 +1,6 @@
 #include "RegexString.h"
 
-namespace or2l {
+namespace base_types {
 RegexString::RegexString(const std::string& str) : std::string(str) {
   if (ContainsInvalidChar())
     throw std::invalid_argument(
@@ -13,4 +13,4 @@ RegexString::RegexString(const char* charp) : std::string(charp) {
         "The provided string does not respect the regex rule provided.(" +
         *this + ")");
 }
-};  // namespace or2l
+};  // namespace base_types

@@ -1,7 +1,7 @@
 #include "ModuleTester.h"
 #include <string_view>
 
-namespace or2l::base_types {
+namespace base_types {
 int ModuleTester::Run() {
   std::cout << tests_.size() << " tests detected.\n";
   auto tests_passed = 0;
@@ -27,4 +27,4 @@ int ModuleTester::Run() {
   }
   return 0;
 }
-}  // namespace or2l::base_types
+}  // namespace base_types
