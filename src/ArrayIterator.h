@@ -67,14 +67,6 @@ class ArrayIterator {
 
   [[nodiscard]] std::size_t GetCounter() const { return counter_; }
 
-  [[nodiscard]] std::string GetCurrentCombinationString() const {
-    std::string ret;
-    for (const auto& i : current_) {
-      ret += &"_"[i];
-    }
-    return ret;
-  }
-
  private:
   std::vector<Bounds> bounds_ = {};
   std::size_t max_iter_ = 1;
