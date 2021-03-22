@@ -5,11 +5,11 @@ namespace base_types
 {
 int ModuleTester::Run()
 {
-    std::cout << tests_.size() << " tests detected.\n";
+    std::cout << tests.size() << " tests detected.\n";
     auto tests_passed = 0;
     auto tests_failed = 0;
 
-    for (auto &test : tests_)
+    for (auto &test : tests)
     {
         try
         {
@@ -25,7 +25,7 @@ int ModuleTester::Run()
         }
     }
 
-    std::cout << "total of successful tests: " << tests_passed << "/" << tests_.size() << ".\n";
+    std::cout << "total of successful tests: " << tests_passed << "/" << tests.size() << ".\n";
 
     if (tests_failed)
     {
