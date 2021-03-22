@@ -28,7 +28,7 @@ struct RandomStruct
     }
 };
 
-std::vector<std::function<void()>> ModuleTester::tests_ = {
+std::vector<std::function<void()>> ModuleTester::tests = {
     []() {
         // tests default constructor
         MultiArray<std::string> test({1, 2});
