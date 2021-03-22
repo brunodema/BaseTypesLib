@@ -29,7 +29,7 @@ namespace base_types
 class ModuleTester : std::vector<std::function<void()>>
 {
   public:
-    static std::vector<std::function<void()>> tests_;
+    static std::vector<std::function<void()>> tests;
 
     static int Run();
 };
