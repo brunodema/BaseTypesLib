@@ -12,8 +12,8 @@ class RegexString : public std::string // considering that I only want to implem
                                        // does not seem so wrong
 {
   public:
-    explicit RegexString(const std::string &_str);
-    explicit RegexString(const char *_charp);
+    RegexString(const std::string &_str);
+    RegexString(const char *_charp);
     virtual ~RegexString() = default;
 
   private:
