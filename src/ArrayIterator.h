@@ -10,7 +10,7 @@ namespace base_types
 class ArrayIterator
 {
   public:
-    explicit ArrayIterator(std::vector<Bounds> bounds) : bounds_(std::move(bounds))
+    explicit ArrayIterator(std::vector<Bounds> _bounds) : bounds_(std::move(_bounds))
     {
         for (const auto &bound : bounds_)
         {
@@ -18,9 +18,9 @@ class ArrayIterator
             current_.push_back(bound.lb);
         }
     }
-    explicit ArrayIterator(const std::vector<std::size_t> &sizes)
+    explicit ArrayIterator(const std::vector<std::size_t> &_sizes)
     {
-        for (const auto &size : sizes)
+        for (const auto &size : _sizes)
         {
             max_iter_ *= size;
             bounds_.emplace_back(0, size);
@@ -28,7 +28,7 @@ class ArrayIterator
         }
     }
 
-    static void Print(std::vector<std::size_t> &combination, const size_t curr_iter)
+    static void Print(std::vector<std::size_t> &_combination, const size_t _curr_iter)
     {
 #ifdef _DEBUG_PRINT
 

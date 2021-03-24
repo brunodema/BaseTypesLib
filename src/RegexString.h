@@ -12,8 +12,8 @@ class RegexString : public std::string // considering that I only want to implem
                                        // does not seem so wrong
 {
   public:
-    RegexString(const std::string &str);
-    RegexString(const char *charp);
+    explicit RegexString(const std::string &_str);
+    explicit RegexString(const char *_charp);
     virtual ~RegexString() = default;
 
   private:
@@ -28,10 +28,10 @@ class RegexString : public std::string // considering that I only want to implem
 
 template <> struct std::hash<base_types::RegexString>
 {
-    std::size_t operator()(const base_types::RegexString &k) const
+    std::size_t operator()(const base_types::RegexString &_k) const
     {
         // changed it to be based on their names, which makes sense when thinking
         // about the LaTeX implementation
-        return std::hash<std::string>()(k);
+        return std::hash<std::string>()(_k);
     };
 };
