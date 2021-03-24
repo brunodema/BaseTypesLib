@@ -14,6 +14,10 @@ struct Bounds
             throw std::invalid_argument("The lower bound can not be bigger that then upper bound.");
         }
     }
+    bool operator==(const Bounds &_other) const
+    {
+        return this->lb == _other.lb && this->ub == _other.ub;
+    }
 
     std::size_t lb = 0;
     std::size_t ub = 0;
